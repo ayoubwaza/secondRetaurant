@@ -16,10 +16,15 @@ body {
 .lineParent {
   overflow: hidden;
 }
-h1,h2,h3,h4,h5,h6{
-  font-family:"Teko", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Teko", sans-serif;
 }
-.costumCursur{
+.costumCursur {
   z-index: calc(9999 * 99999);
   position: fixed;
   height: 50px;
@@ -32,8 +37,7 @@ h1,h2,h3,h4,h5,h6{
   transform: translate(-50%, -50%);
   transition: 300ms ease-out;
 }
-.pannel{
-  width: 100%;
+.pannel {
   font-weight: bold;
   font-size: 1.5em;
   color: #000;
@@ -41,10 +45,32 @@ h1,h2,h3,h4,h5,h6{
   justify-content: center;
   align-items: center;
   height: 100%;
+  height: 100vh;
+  position: relative;
 }
-.wrapping{
+.wrapping {
   width: 600%;
   display: flex;
   flex-wrap: nowrap;
-  height: 100%;
+  height: 100vh;
+}
+.first {
+  background: red;
+  width: 100%;
+  height: 100vh;
+}
+.second {
+  background: yellow;
+  width: 100%;
+  height: 100vh;
+}
+.third {
+  background: blue;
+  width: 100%;
+  height: 100vh;
+}
+.fourth {
+  background: purple;
+  width: 100%;
+  height: 100vh;
 }

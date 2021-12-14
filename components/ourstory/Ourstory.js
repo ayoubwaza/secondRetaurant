@@ -2,14 +2,13 @@ import React, { useEffect, useRef } from "react";
 import styles from "../../styles/Home.module.scss";
 import SplitText from "../../utils/split3.min.js";
 import gsap from "gsap";
-import { Power2 } from "gsap";
+import { Power2, Power3 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import CSSRulePlugin from "gsap/dist/CSSRulePlugin";
 function Ourstory() {
   const titleStory = useRef();
   const ourstory = useRef();
   const paraOurstory = useRef();
-  const image_ourStory = useRef();
+  const image_ourStory = useRef(null);
   gsap.registerPlugin(ScrollTrigger, SplitText);
   useEffect(() => {
     const mySplitText = new SplitText(paraOurstory.current, {
@@ -25,23 +24,22 @@ function Ourstory() {
       type: "lines",
       linesClass: "lineParent",
     });
+    const fruits = image_ourStory.firstElementChild;
     gsap
-      .timeline(
-        {
-          scrollTrigger: {
-            trigger: ourstory.current,
-            toggleActions: "play",
-            start: "top top",
-            scrub: 1,
-            pin: true,
-            markers: {
-              startColor: "red",
-              endColor: "red",
-              fontSize: "50px",
-            },
+      .timeline({
+        scrollTrigger: {
+          trigger: ourstory.current,
+          toggleActions: "play",
+          start: "top top",
+          scrub: 1,
+          pin: true,
+          markers: {
+            startColor: "red",
+            endColor: "red",
+            fontSize: "50px",
           },
-        }
-      )
+        },
+      })
       .to(spliTitle.lines, {
         duration: 1.6,
         delay: 0.2,
@@ -60,14 +58,17 @@ function Ourstory() {
         ease: "back",
         stagger: 0.01,
       })
-      .fromTo(
-        image_ourStory,
-        {
-          opacity: 0,
-          y: 1000,
-        },
-        { opacity: 1, y: 0 }
-      );
+      .from(fruits, {
+        y: 800,
+        duration: 1.2,
+        ease: Power3.easeOut,
+      })
+      .from(fruits.firstElementChild, {
+        scale: 1.6,
+        delay: 2,
+        duration: 2,
+        ease: Power3.easeOut,
+      });
   }, []);
   return (
     <section className="ourStorySectyion" ref={ourstory}>
@@ -84,7 +85,10 @@ function Ourstory() {
             </p>
           </div>
           <div>
-            <div ref={(el) => (image_ourStory = el)}>
+            <div
+              className={styles.handle_image_ourStory}
+              ref={(el) => (image_ourStory = el)}
+            >
               <img src="/image1.jpeg" width="800" height="400" alt="" />
             </div>
           </div>
