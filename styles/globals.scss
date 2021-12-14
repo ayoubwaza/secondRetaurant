@@ -1,9 +1,9 @@
-html,
 body {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -37,40 +37,36 @@ h6 {
   transform: translate(-50%, -50%);
   transition: 300ms ease-out;
 }
-.pannel {
-  font-weight: bold;
-  font-size: 1.5em;
-  color: #000;
+.panel {
+  width: 100%;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100%;
-  height: 100vh;
-  position: relative;
+  padding: 0;
+  margin: 0;
 }
-.wrapping {
-  width: 600%;
+.wrappingIT {
+  width: 600% !important;
   display: flex;
   flex-wrap: nowrap;
-  height: 100vh;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
-.first {
+.green {
+  background: green;
+}
+.white {
+  background: #FFF;
+}
+.red {
   background: red;
-  width: 100%;
-  height: 100vh;
 }
-.second {
-  background: yellow;
-  width: 100%;
-  height: 100vh;
-}
-.third {
-  background: blue;
-  width: 100%;
-  height: 100vh;
-}
-.fourth {
-  background: purple;
-  width: 100%;
+.green,.white,.third{
+  margin: 0 !important;
+  padding: 0 !important;
   height: 100vh;
 }

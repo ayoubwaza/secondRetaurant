@@ -3,6 +3,7 @@ import Gallery from "../components/gallery/Gallery";
 //import Gallery from "../components/gallery/Gallery";
 import Hero from "../components/hero/Hero";
 import Ourstory from "../components/ourstory/Ourstory";
+import Ourservices from "../components/services/Ourservices.";
 import styles from "../styles/Home.module.scss";
 export default function Home() {
   return (
@@ -19,9 +20,18 @@ export default function Home() {
           }
         `}
       </style>
-      <Hero />
-      <Ourstory/>
-        <Gallery/>
+      <div>
+        <Hero />
+      </div>
+      <div>
+        <Ourstory />
+      </div>
+      <div>
+        <Gallery />
+      </div>
+      <div>
+        <Ourservices/>
+      </div>
     </div>
   );
 }

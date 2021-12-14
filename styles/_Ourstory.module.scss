@@ -36,3 +36,44 @@
     }
   }
 }
+@media only screen and (max-width: 1450px) {
+  ._ourStory {
+    width: $per;
+    height: $per;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    flex-direction: $cl;
+    padding: $padd;
+    margin-bottom: 20px;
+    h1 {
+      font-family: $font;
+      font-size: 180px;
+      letter-spacing: 20px;
+      text-align: $c;
+      color: #000;
+    }
+    img {
+      object-fit: $cv;
+    }
+    .ourStory_child {
+      width: $perhelf;
+      display: $f;
+      justify-content: $sp;
+      align-items: $c;
+      flex-direction: $cl;
+      .ourStory_handelContent {
+        width: 500px;
+        p {
+          font-weight: $b;
+          width: 500px;
+          text-align: $c;
+          line-height: 3;
+        }
+      }
+      .handle_image_ourStory{
+        position: $re;
+      }
+    }
+  }
+}

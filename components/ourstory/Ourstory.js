@@ -27,12 +27,13 @@ function Ourstory() {
     const fruits = image_ourStory.firstElementChild;
     gsap
       .timeline({
+        defaults: { delay: 0.8, duration: 0.5 },
         scrollTrigger: {
           trigger: ourstory.current,
           toggleActions: "play",
-          start: "top top",
-          scrub: 1,
+          scrub: 5,
           pin: true,
+          end: "bottom 100%",
           markers: {
             startColor: "red",
             endColor: "red",
@@ -41,15 +42,12 @@ function Ourstory() {
         },
       })
       .to(spliTitle.lines, {
-        duration: 1.6,
-        delay: 0.2,
         y: 0,
         opacity: 1,
         stagger: 0.1,
         ease: Power2.easeInOut,
       })
       .from(chars, {
-        duration: 0.8,
         opacity: 0,
         scale: 0,
         y: 80,
@@ -59,19 +57,16 @@ function Ourstory() {
         stagger: 0.01,
       })
       .from(fruits, {
-        y: 800,
-        duration: 1.2,
+        x: -800,
         ease: Power3.easeOut,
       })
       .from(fruits.firstElementChild, {
         scale: 1.6,
-        delay: 2,
-        duration: 2,
         ease: Power3.easeOut,
       });
   }, []);
   return (
-    <section className="ourStorySectyion" ref={ourstory}>
+    <section className={styles.ourStorySectyion} ref={ourstory}>
       <div className={styles._ourStory}>
         <h1 ref={titleStory}>Our Story</h1>
         <div className={styles.ourStory_child}>

@@ -34,3 +34,42 @@
     }
   }
 }
+@media only screen and (max-width: 1450px) {
+  ._hero {
+    width: $per;
+    height: $per;
+    display: $f;
+    justify-content: $c;
+    align-items: $c;
+    background: #000;
+    flex-direction: $cl;
+    padding: $padd;
+    h1 {
+      font-family: $font;
+      font-size: 150px;
+      letter-spacing: 20px;
+      text-align: $c;
+      color: #fff;
+    }
+    ._hero_child {
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      position: $re;
+      .firstImage_Hero {
+        img {
+          object-fit: $cv;
+          width: 680px;
+          height: 370px;
+        }
+      }
+      .image_hero_text {
+        position: absolute;
+        h2 {
+          font-size: 100px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

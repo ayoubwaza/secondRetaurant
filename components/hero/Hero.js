@@ -43,9 +43,8 @@ function Hero() {
       linesClass: "lineParent",
     });
     const tl = gsap.timeline({ defaults: { delay: 0.9, duration: 1.9 } });
-    const imageHero = hero_firstImg.firstElementChild;
     tl.fromTo(
-      hero_firstImg,
+      hero_firstImg.current,
       {
         x: 2000,
         opacity: 0,
@@ -57,8 +56,14 @@ function Hero() {
         ease: Power3.easeOut,
       }
     )
-      .fromTo(
-        imageHero,
+      .to(split2.lines, {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        ease: Power2,
+      })
+      /* .fromTo(
+        hero_firstImg.current.children[0],
         {
           width: `680px`,
           height: `370px`,
@@ -69,23 +74,14 @@ function Hero() {
           height: `540px`,
           ease: Power3.easeOut,
         }
-      )
-      .to(split2.lines, {
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-        ease: Power2,
-      });
+      ); */
   }, []);
   return (
     <section ref={hero} id="hero">
       <div className={styles._hero}>
         <h1 ref={title}>El Rincon De Mexico</h1>
         <div ref={hero_child} className={styles._hero_child}>
-          <div
-            ref={(el) => (hero_firstImg = el)}
-            className={styles.firstImage_Hero}
-          >
+          <div ref={hero_firstImg} className={styles.firstImage_Hero}>
             <img src="/mexican-food.jpg" width="" height="" alt="" />
           </div>
           <div className={styles.image_hero_text}>
