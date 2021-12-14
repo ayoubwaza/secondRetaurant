@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.lineChildren {
+  transform: translate(0px, 800px);
+}
+.lineParent {
+  overflow: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family:"Teko", sans-serif;
+}
+.costumCursur{
+  z-index: calc(9999 * 99999);
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  mix-blend-mode: difference;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  background: #000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 300ms ease-out;
+}
+.pannel{
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.wrapping{
+  width: 600%;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+}

@@ -1,0 +1,74 @@
+._ourStory {
+  width: $per;
+  height: $vh;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  padding: $padd;
+  h1 {
+    font-family: $font;
+    font-size: 180px;
+    letter-spacing: 20px;
+    text-align: $c;
+    color: #000;
+  }
+  img {
+    object-fit: $cv;
+  }
+  .ourStory_child {
+    width: $perhelf;
+    display: $f;
+    justify-content: $sp;
+    align-items: $c;
+    flex-direction: $cl;
+    .ourStory_handelContent {
+      width: 500px;
+      p {
+        font-weight: $b;
+        width: 500px;
+        text-align: $c;
+        line-height: 3;
+      }
+    }
+  }
+}
+/* .first{
+  background: red;
+}
+.second{
+  background: yellow;
+}
+.third{
+  background: blue;
+}
+.fourth{
+  background: purple;
+}
+ */
+/* <div className="wrapping">
+        <div className={`pannel ${styles.first}`}>Pannel1</div>
+        <div className={`pannel ${styles.second}`}>Pannel2</div>
+        <div className={`pannel ${styles.third}`}>Pannel3</div>
+        <div className={`pannel ${styles.fourth}`}>Pannel4</div>
+      </div> */
+/* 
+  useEffect(() => {
+    //horizontal scroll
+    const panels = gsap.utils.toArray(".pannel");
+    gsap.to(panels, {
+      xPercent: -100 * (panels.length - 1),
+      scrollTrigger: {
+        trigger: ".wrapping",
+        pin: true,
+        start: "top top",
+        scrub: 1,
+        snap: {
+          snapTo: 1 / (panels.length - 1),
+          inertia: false,
+          duration: { min: 0.1, max: 0.1 },
+        },
+        end: () => "+=" + document.querySelector(".wrapping"),
+      },
+    }); 
+  },[]) */
