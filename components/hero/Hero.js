@@ -55,14 +55,13 @@ function Hero() {
         opacity: 1,
         ease: Power3.easeOut,
       }
-    )
-      .to(split2.lines, {
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-        ease: Power2,
-      })
-      /* .fromTo(
+    ).to(split2.lines, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      ease: Power2,
+    });
+    /* .fromTo(
         hero_firstImg.current.children[0],
         {
           width: `680px`,

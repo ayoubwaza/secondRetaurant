@@ -5,6 +5,9 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 function Gallery() {
   const gaga = useRef();
+  const green_panel = useRef(null);
+  const white_panel = useRef(null);
+  const red_panel = useRef(null);
   useEffect(() => {
     //horizontal scroll
     const sections = gsap.utils.toArray(".panel");
@@ -21,7 +24,7 @@ function Gallery() {
         snap: {
           snapTo: 1 / (sections.length - 1),
           inertia: false,
-          duration: { min: 1, max: 2 },
+          duration: { min: 5, max: 5 },
         },
         end: () => "+=" + document.querySelector(".wrappingIT").offsetWidth,
       },
@@ -29,19 +32,19 @@ function Gallery() {
   }, []);
   return (
     <div ref={gaga} className="wrappingIT">
-      <div className="panel green">
-        <h2>The 1 Pannel</h2>
+      <div ref={green_panel} className="panel green">
+        <h2>THE GREEN COLOR</h2>
         <div>
           <img src="/image1.jpeg" width="400" height="400" alt="" />
         </div>
       </div>
-      <div className="panel white">
+      <div ref={white_panel} className="panel white">
         <h2>The 2 Pannel</h2>
         <div>
           <img src="/image1.jpeg" width="400" height="400" alt="" />
         </div>
       </div>
-      <div className="panel red">
+      <div ref={red_panel} className="panel red">
         <h2>The 3 Pannel</h2>
         <div>
           <img src="/image1.jpeg" width="400" height="400" alt="" />

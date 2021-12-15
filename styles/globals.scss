@@ -37,6 +37,7 @@ h6 {
   transform: translate(-50%, -50%);
   transition: 300ms ease-out;
 }
+// gallry style
 .panel {
   width: 100%;
   color: white;
@@ -58,14 +59,24 @@ h6 {
 }
 .green {
   background: green;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2{
+    position: absolute;
+    font-size: 200px;
+  }
 }
 .white {
-  background: #FFF;
+  background: #fff;
 }
 .red {
   background: red;
 }
-.green,.white,.third{
+.green,
+.white,
+.third {
   margin: 0 !important;
   padding: 0 !important;
   height: 100vh;

@@ -27,13 +27,12 @@ function Ourstory() {
     const fruits = image_ourStory.firstElementChild;
     gsap
       .timeline({
-        defaults: { delay: 0.8, duration: 0.5 },
+        defaults: { delay: 0.7, duration: 1.2 },
         scrollTrigger: {
           trigger: ourstory.current,
           toggleActions: "play",
-          scrub: 5,
+          scrub: 1,
           pin: true,
-          end: "bottom 100%",
           markers: {
             startColor: "red",
             endColor: "red",
@@ -41,12 +40,16 @@ function Ourstory() {
           },
         },
       })
-      .to(spliTitle.lines, {
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-        ease: Power2.easeInOut,
-      })
+      .fromTo(
+        spliTitle.lines,
+        { y: 200, opacity: 0, ease: Power2.easeOut },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          ease: Power2.easeOut,
+        }
+      )
       .from(chars, {
         opacity: 0,
         scale: 0,
@@ -56,14 +59,22 @@ function Ourstory() {
         ease: "back",
         stagger: 0.01,
       })
-      .from(fruits, {
-        x: -800,
-        ease: Power3.easeOut,
-      })
-      .from(fruits.firstElementChild, {
-        scale: 1.6,
-        ease: Power3.easeOut,
-      });
+      .fromTo(
+        fruits,
+        { x: -8000, ease: Power3.easeOut },
+        {
+          x: 0,
+          ease: Power3.easeOut,
+        }
+      )
+      .fromTo(
+        fruits.firstElementChild,
+        { scale: 0.6, ease: Power3.easeOut },
+        {
+          scale: 1.6,
+          ease: Power3.easeOut,
+        }
+      );
   }, []);
   return (
     <section className={styles.ourStorySectyion} ref={ourstory}>
