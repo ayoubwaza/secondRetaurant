@@ -4,6 +4,7 @@ import SplitText from "../../utils/split3.min.js";
 import gsap from "gsap";
 import { Power2, Power3 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { Expo } from "gsap";
 function Ourstory() {
   const titleStory = useRef();
   const ourstory = useRef();
@@ -24,29 +25,25 @@ function Ourstory() {
       type: "lines",
       linesClass: "lineParent",
     });
-    const fruits = image_ourStory.firstElementChild;
-    gsap
-      .timeline({
-        defaults: { delay: 0.8, duration: 1.8 },
-        scrollTrigger: {
-          trigger: ourstory.current,
-          toggleActions: "play",
-          scrub: 1,
-          pin: true,
-          end: "bottom 100%",
-          markers: {
-            startColor: "red",
-            endColor: "red",
-            fontSize: "50px",
-          },
-        },
-      })
-      .to(spliTitle.lines, {
+    const tl = gsap.timeline({
+      ease: Expo.easeOut,
+      scrollTrigger: {
+        trigger: ourstory.current,
+        toggleActions: "play",
+        start: "top top",
+        scrub: 1,
+        pin: true,
+      },
+    });
+    tl.fromTo(
+      spliTitle.lines,
+      { y: 200, opacity: 0 },
+      {
         y: 0,
         opacity: 1,
         stagger: 0.1,
-        ease: Power2.easeInOut,
-      })
+      }
+    )
       .from(chars, {
         opacity: 0,
         scale: 0,
@@ -56,13 +53,17 @@ function Ourstory() {
         ease: "back",
         stagger: 0.01,
       })
-      .from(fruits, {
-        x: -10000,
-        ease: Power3.easeOut,
-      })
-      .from(fruits.firstElementChild, {
+      .fromTo(
+        image_ourStory.current,
+        { opacity: 0, x: -800 },
+        {
+          opacity: 1,
+          x: 0,
+          duration:0.9,
+        }
+      )
+      .to(image_ourStory.current.children[0], {
         scale: 1.6,
-        ease: Power3.easeOut,
       });
   }, []);
   return (
@@ -80,10 +81,7 @@ function Ourstory() {
             </p>
           </div>
           <div>
-            <div
-              className={styles.handle_image_ourStory}
-              ref={(el) => (image_ourStory = el)}
-            >
+            <div className={styles.handle_image_ourStory} ref={image_ourStory}>
               <img src="/image1.jpeg" width="800" height="400" alt="" />
             </div>
           </div>

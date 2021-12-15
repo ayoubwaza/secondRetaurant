@@ -4,7 +4,7 @@ import Gallery from "../components/gallery/Gallery";
 import Hero from "../components/hero/Hero";
 import Ourstory from "../components/ourstory/Ourstory";
 import Ourservices from "../components/services/Ourservices.";
-import styles from "../styles/Home.module.scss";
+import Footer from '../components/Footer/Footer'
 export default function Home() {
   return (
     <div>
@@ -31,6 +31,9 @@ export default function Home() {
       </div>
       <div>
         <Ourservices/>
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );

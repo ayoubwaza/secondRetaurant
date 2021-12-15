@@ -1,0 +1,15 @@
+.our_services {
+  width: $per;
+  height: $vh;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
+  h1{
+      font-size: 200px;
+      font-family: $font;
+      letter-spacing: 10px;
+      margin: 0;
+      padding: 0;
+  }
+}

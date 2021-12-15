@@ -23,7 +23,7 @@ function Hero() {
     });
     gsap.fromTo(
       split.lines,
-      { y: 1000 },
+      { y: 1000, opacity: 0 },
       {
         duration: 1,
         delay: 0.2,
@@ -42,11 +42,15 @@ function Hero() {
       type: "lines",
       linesClass: "lineParent",
     });
-    const tl = gsap.timeline({ defaults: { delay: 0.9, duration: 1.9 } });
+    const tl = gsap.timeline({
+      delay: 0.2,
+      duration: 1.2,
+      ease: Power3.easeOut,
+    });
     tl.fromTo(
       hero_firstImg.current,
       {
-        x: 2000,
+        x: 200,
         opacity: 0,
         ease: Power3.easeOut,
       },
@@ -61,20 +65,11 @@ function Hero() {
         opacity: 1,
         stagger: 0.1,
         ease: Power2,
+        fontSize: "100px",
       })
-      /* .fromTo(
-        hero_firstImg.current.children[0],
-        {
-          width: `680px`,
-          height: `370px`,
-          ease: Power3.easeOut,
-        },
-        {
-          width: `960px`,
-          height: `540px`,
-          ease: Power3.easeOut,
-        }
-      ); */
+      .to(hero_firstImg.current.children[0], {
+        scale: 1.6,
+      });
   }, []);
   return (
     <section ref={hero} id="hero">

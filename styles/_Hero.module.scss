@@ -19,6 +19,7 @@
     align-items: $c;
     position: $re;
     .firstImage_Hero {
+      overflow: hidden;
       img {
         object-fit: $cv;
         width: 680px;

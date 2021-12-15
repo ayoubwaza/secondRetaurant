@@ -10,6 +10,10 @@ body {
   margin: 0;
   padding: 0;
 }
+a{
+  text-decoration: none;
+  color: #fff;
+}
 .lineChildren {
   transform: translate(0px, 800px);
 }
@@ -37,36 +41,97 @@ h6 {
   transform: translate(-50%, -50%);
   transition: 300ms ease-out;
 }
+// gallry style
 .panel {
   width: 100%;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100%;
   padding: 0;
   margin: 0;
 }
 .wrappingIT {
-  width: 600% !important;
+  width: 300% !important;
   display: flex;
   flex-wrap: nowrap;
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
-.green {
-  background: green;
-}
-.white {
-  background: #FFF;
-}
+.green,
+.white,
 .red {
-  background: red;
-}
-.green,.white,.third{
   margin: 0 !important;
   padding: 0 !important;
   height: 100vh;
+}
+
+.green {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  .greenPanle_ImageHandler {
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 800px;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+  .greenPanelSubTitle,
+  .greenPanelTitle {
+    position: absolute;
+    font-size: 220px;
+    font-family: "Teko", sans-serif;
+    z-index: 1;
+    font-weight: 500;
+  }
+  .greenPanelSubTitle {
+    top: 50%;
+    right: 110px;
+  }
+  .mexicotitle_panel {
+    position: absolute;
+    bottom: 50%;
+    font-size: 220px;
+    font-family: "Teko", sans-serif;
+    z-index: 9;
+    right: 2%;
+  }
+}
+.white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  h1 {
+    position: absolute;
+    font-size: 220px;
+    font-family: "Teko", sans-serif;
+    color: #000;
+    z-index: 999;
+  }
+}
+.whitePannelGrid {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 10px;
+  img {
+    object-fit: cover;
+    z-index: 1;
+    filter: drop-shadow(0 50px 100px rgb(134, 133, 133));
+    min-height: 300px;
+    opacity: 0 ;
+  }
+}
+.red{
+  background: red;
 }
