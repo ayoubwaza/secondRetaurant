@@ -27,11 +27,11 @@ function Ourstory() {
     const fruits = image_ourStory.firstElementChild;
     gsap
       .timeline({
-        defaults: { delay: 0.8, duration: 0.5 },
+        defaults: { delay: 0.8, duration: 1.8 },
         scrollTrigger: {
           trigger: ourstory.current,
           toggleActions: "play",
-          scrub: 5,
+          scrub: 1,
           pin: true,
           end: "bottom 100%",
           markers: {
@@ -57,7 +57,7 @@ function Ourstory() {
         stagger: 0.01,
       })
       .from(fruits, {
-        x: -800,
+        x: -10000,
         ease: Power3.easeOut,
       })
       .from(fruits.firstElementChild, {
