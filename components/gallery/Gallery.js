@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 function Gallery() {
   const mainGallery = useRef(null);
   const green_panel = useRef(null);
-  const red_panel = useRef(null);
   const greenPanelTitle = useRef(null);
   const greenPanle_ImageHandler = useRef(null);
   const greenPanelSubTitle = useRef(null);
@@ -19,71 +18,97 @@ function Gallery() {
   });
   useEffect(() => {
     //horizontal scroll
-    const sections = gsap.utils.toArray(".panel");
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".wrappingIT",
-        pin: true,
-        start: "top top",
-        scrub: 1,
-        snap: {
-          snapTo: 1 / (sections.length - 1),
-          inertia: true,
-          duration: { min: 0.1, max: 0.1 },
+    if (window.innerWidth > 620) {
+      const sections = gsap.utils.toArray(".panel");
+      return gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".wrappingIT",
+          pin: true,
+          start: "top top",
+          scrub: 1,
+          snap: {
+            snapTo: 1 / (sections.length - 1),
+            inertia: true,
+            duration: { min: 0.1, max: 0.1 },
+          },
+          end: () => "+=" + document.querySelector(".wrappingIT").offsetWidth,
         },
-        end: () => "+=" + document.querySelector(".wrappingIT").offsetWidth,
-      },
-    });
+      });
+    }
   }, []);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      ease: Expo.easeOut,
-      delay: 0.6,
-      duration: 1,
-      scrollTrigger: {
-        trigger: mainGallery.current,
-        toggleActions: "play",
-        start: "top",
-        scrub: 1,
-      },
-    });
-    tl.to(greenPanle_ImageHandler.current, { scale: 1.2 })
-      .to(greenPanle_ImageHandler.current.children[0], { scale: 1.6 })
-      .to(greenPanelTitle.current, {
-        x: -20,
-        color: "transparent",
-        webkitTextStroke: "4px #FFF",
-        zIndex: 9,
+    if (window.innerWidth > 620) {
+      const tl = gsap.timeline({
+        ease: Expo.easeOut,
+        delay: 0.6,
+        duration: 1,
+        scrollTrigger: {
+          trigger: mainGallery.current,
+          toggleActions: "play",
+          start: "top",
+          scrub: 1,
+        },
+      });
+      tl.to(greenPanle_ImageHandler.current, {
+        scale: 1.2,
       })
-      .to(greenPanelSubTitle.current, { y: 100 })
-      .fromTo(
-        mexicotitle_panel.current,
-        { opacity: 0 },
-        { opacity: 1, y: -100 }
-      );
+        .to(greenPanle_ImageHandler.current.children[0], { scale: 1.6 })
+        .to(greenPanelTitle.current, {
+          x: -20,
+          color: "transparent",
+          webkitTextStroke: "4px #FFF",
+          zIndex: 9,
+        })
+        .to(greenPanelSubTitle.current, { y: 100 })
+        .fromTo(
+          mexicotitle_panel.current,
+          { opacity: 0 },
+          { opacity: 1, y: -100 }
+        );
+    }
   }, []);
   useEffect(() => {
-    const tls = gsap.timeline({
-      ease: Expo.easeOut,
-    });
-    tls
+    if (window.innerWidth > 620) {
+      const tls = gsap.timeline({
+        ease: Expo.easeOut,
+      });
+      tls
         .to(images.current.children[0], { opacity: 0 })
         .to(images.current.children[1], { opacity: 0 })
         .to(images.current.children[2], { opacity: 0 })
         .to(images.current.children[3], { opacity: 0 })
         .to(images.current.children[4], { opacity: 0 })
         .to(images.current.children[5], { opacity: 0 });
-    if (inView) {
-      tls
-        .to(images.current.children[0], { opacity: 1, y: -100 })
-        .to(images.current.children[3], { opacity: 1, y: 160 })
-        .to(images.current.children[2], { opacity: 1, y: -20 })
-        .to(images.current.children[4], { opacity: 1, y: 130 })
-        .to(images.current.children[1], { opacity: 1, y: -100 })
-        .to(images.current.children[5], { opacity: 1, y: 100 });
+      if (inView) {
+        tls
+          .to(images.current.children[0], {
+            opacity: 1,
+            y: -100,
+          })
+          .to(images.current.children[3], {
+            opacity: 1,
+            y: 160,
+          })
+          .to(images.current.children[2], {
+            opacity: 1,
+            y: -20,
+          })
+          .to(images.current.children[4], {
+            opacity: 1,
+            y: 130,
+          })
+          .to(images.current.children[1], {
+            opacity: 1,
+            y: -100,
+          })
+          .to(images.current.children[5], {
+            opacity: 1,
+            y: 100,
+          });
+      }
     }
   }, [inView]);
   return (
@@ -142,13 +167,6 @@ function Gallery() {
             height="300"
             alt="restaurant chicago el rincon de mexico"
           />
-        </div>
-      </div>
-      {/* animating third panel */}
-      <div ref={red_panel} className="panel red">
-        <h2>The 3 Pannel</h2>
-        <div>
-          <img src="/image2.jpg" width="400" height="400" alt="" />
         </div>
       </div>
     </div>

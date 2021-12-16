@@ -74,3 +74,22 @@
     }
   }
 }
+//mobile
+@media only screen and (max-width: 620px) {
+  ._hero {
+    height: $per;
+    padding: 0;
+    h1 {
+      font-size: 50px;
+      text-align: $c;
+    }
+    ._hero_child {
+      .firstImage_Hero {
+        img {
+          width: $per;
+          height: 370px;
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import styles from "../../styles/Home.module.scss";
 import SplitText from "../../utils/split3.min.js";
 import gsap from "gsap";
-import { Power2, Power3 } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Expo } from "gsap";
 function Ourstory() {
@@ -31,8 +30,14 @@ function Ourstory() {
         trigger: ourstory.current,
         toggleActions: "play",
         start: "top top",
+        end: "+=400",
         scrub: 1,
         pin: true,
+        markers: {
+          startColor: "yellow",
+          endColor: "yellow",
+          fontSize: "40px",
+        },
       },
     });
     tl.fromTo(
@@ -55,11 +60,10 @@ function Ourstory() {
       })
       .fromTo(
         image_ourStory.current,
-        { opacity: 0, x: -800 },
+        { opacity: 0, clipPath: "inset(100%  40%)" },
         {
           opacity: 1,
-          x: 0,
-          duration:0.9,
+          clipPath:"inset(0%  0%)",
         }
       )
       .to(image_ourStory.current.children[0], {

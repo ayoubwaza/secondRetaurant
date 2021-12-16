@@ -1,6 +1,7 @@
-
 [
-    {"data":"100072644384007|safiiulinat8341@list.ru:HJWTO6mw8|safiiulinat8341@list.ru:jX7drzNeiH3RWpQ6drxe|25.10.1984|Lenchik:Krotter|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36|EAABsbCS1iHgBALSBmpY3hf306B80oOQZBbZAQ75ZAAj3LFIq6L37RUo9Uii3etcjWwOwjcBIkvB8Ckwt5psHWJyEffg2js2HWuMppbgKPHK9czErZBmiYhnnaFtIIh8wVCGfTleZCCTIEcfhXBrXNHB0SJH0KIK5Pa5P8mBHzNRArhWaVZBCUo|"},
+  {
+    "other": "100072644384007|safiiulinat8341@list.ru:HJWTO6mw8|safiiulinat8341@list.ru:jX7drzNeiH3RWpQ6drxe|25.10.1984|Lenchik:Krotter|Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36|EAABsbCS1iHgBALSBmpY3hf306B80oOQZBbZAQ75ZAAj3LFIq6L37RUo9Uii3etcjWwOwjcBIkvB8Ckwt5psHWJyEffg2js2HWuMppbgKPHK9czErZBmiYhnnaFtIIh8wVCGfTleZCCTIEcfhXBrXNHB0SJH0KIK5Pa5P8mBHzNRArhWaVZBCUo"
+  },
   {
     "domain": ".facebook.com",
     "expirationDate": 1694607543000,
