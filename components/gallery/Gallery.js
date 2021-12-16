@@ -56,7 +56,7 @@ function Gallery() {
         x: -20,
         color: "transparent",
         webkitTextStroke: "4px #FFF",
-        zIndex: 1 * 9,
+        zIndex: 9,
       })
       .to(greenPanelSubTitle.current, { y: 100 })
       .fromTo(
