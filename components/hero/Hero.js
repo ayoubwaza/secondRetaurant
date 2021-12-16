@@ -77,7 +77,8 @@ function Hero() {
         <h1 ref={title}>El Rincon De Mexico</h1>
         <div ref={hero_child} className={styles._hero_child}>
           <div ref={hero_firstImg} className={styles.firstImage_Hero}>
-            <img src="/mexican-food.jpg" width="" height="" alt="" />
+          <img src="./image.jpeg" width="" height="" alt="" />
+
           </div>
           <div className={styles.image_hero_text}>
             <h2 ref={subTitle}>Mexico...</h2>

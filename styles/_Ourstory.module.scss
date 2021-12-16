@@ -99,7 +99,7 @@
     img {
       object-fit: $cv;
       width: $per;
-      height: $per / 2;
+      height: calc($per / 2);
     }
     .ourStory_child {
       width: $per;

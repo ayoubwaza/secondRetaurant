@@ -31,7 +31,7 @@ function Gallery() {
           snap: {
             snapTo: 1 / (sections.length - 1),
             inertia: true,
-            duration: { min: 0.1, max: 0.1 },
+            duration: { min: 2, max: 2},
           },
           end: () => "+=" + document.querySelector(".wrappingIT").offsetWidth,
         },

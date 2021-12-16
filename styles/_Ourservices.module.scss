@@ -45,6 +45,34 @@
     }
   }
 }
+//medium
+@media only screen and (max-width: 1400px) {
+  .our_services {
+    width: $per;
+    height: $vh;
+    padding: $padd;
+    h1 {
+      font-size: 150px;
+    }
+    .handel_image_services {
+      width: $per;
+      position: $re;
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      overflow: hidden;
+      margin: 0 10px 0 10px;
+      text-align: $c;
+      span {
+        position: absolute;
+        font-family: $font;
+        font-weight: $b;
+        font-size: 50px;
+      }
+    }
+  }
+}
+//mobile
 @media only screen and (max-width: 620px) {
   .our_services {
     width: $per;

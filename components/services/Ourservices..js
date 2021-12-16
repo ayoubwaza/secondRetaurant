@@ -61,7 +61,7 @@ function Ourservices() {
           { opacity: 1 }
         )
         .to(fourthHandler.current.children[0], { scale: 1.6 })
-        .to(fourthHandler.current, { y: 300 })
+        .to(fourthHandler.current, { y: 160 })
         .to(fifththHandler.current.children[0], { clipPath: "inset(0% 0%)" })
         .fromTo(
           fifththHandler.current.children[1],
@@ -79,30 +79,30 @@ function Ourservices() {
       <h1 ref={service_title}>SERVICES && OPTIONS</h1>
       <div ref={services_child} className={styles.our_services_child}>
         <div ref={firstHandler} className={styles.handel_image_services}>
-          <img src="/dine-in-rinco.jpg" width="300" height="400" alt="" />
+          <img src="/dine-in-rinco.jpg" width="350" height="300" alt="" />
           <span>Dine-in</span>
         </div>
         <div ref={secondHandler} className={styles.handel_image_services}>
-          <img src="/takeawayfoodrinco.jpg" width="300" height="400" alt="" />
+          <img src="/takeawayfoodrinco.jpg" width="350" height="300" alt="" />
           <span>Take-away</span>
         </div>
         <div ref={thirdHandler} className={styles.handel_image_services}>
           <img
             src="/nocontactdelivery-rinco.jpg"
-            width="300"
-            height="400"
+            width="350"
+            height="300"
             alt=""
           />
           <span>No-contact delivery</span>
         </div>
         <div ref={fourthHandler} className={styles.handel_image_services}>
-          <img src="/delivery-rinco.jpg" width="300" height="400" alt="" />
+          <img src="/delivery-rinco.jpg" width="350" height="300" alt="" />
           <span>Delivery</span>
         </div>
         <div ref={fifththHandler} className={styles.handel_image_services}>
           <img
             src="/curbside-pickup-rinco.jpg"
-            width="300"
+            width="350"
             height="400"
             alt=""
           />
