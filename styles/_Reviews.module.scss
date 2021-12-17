@@ -7,8 +7,8 @@
   align-items: $c;
   flex-direction: $cl;
   position: $re;
-  h3{
-    color: #FFF;
+  h3 {
+    color: #fff;
     position: absolute;
     top: 10%;
     font-size: 50px;
@@ -41,13 +41,14 @@
     position: absolute;
     right: 0;
   }
-  .handle_numbers{
+  .handle_numbers {
     position: $re;
-    h1{
+    h1 {
       position: absolute;
-      top: -50%;
-      color: #FFF;
-      font-size: 400px;
+      top: 200px;
+      left: 0;
+      color: #fff;
+      font-size: 200px;
       z-index: 99;
       mix-blend-mode: difference;
     }
@@ -85,6 +86,56 @@
       }
       img {
         object-fit: $cv;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .reviews_parent {
+    width: $per;
+    height: $vh;
+    position: $re;
+    padding: $padd;
+    &::before {
+      content: "TESTIMONIAL";
+      font-size: 150px;
+    }
+    &::after {
+      content: "TESTIMONIAL";
+      font-size: 150px;
+    }
+    h3 {
+      color: #fff;
+      position: absolute;
+      top: 10%;
+      font-size: 50px;
+    }
+
+    .handle_numbers {
+      position: $re;
+      h1 {
+        position: absolute;
+        top: 200px;
+        left: 0;
+        color: #fff;
+        font-size: 100px;
+        z-index: 99;
+        mix-blend-mode: difference;
+      }
+    }
+    position: $re;
+    .reviews_child {
+      display: $f;
+      justify-content: $c;
+      align-items: $c;
+      width: $perhelf;
+      position: absolute;
+      left: 50%;
+      .each_rev_child {
+        z-index: 9;
+        width: 300px;
+        max-width: 300px;
+        min-width: 300px;
       }
     }
   }

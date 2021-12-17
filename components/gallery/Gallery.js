@@ -29,7 +29,7 @@ function Gallery() {
           scrub: 1,
           snap: {
             snapTo: 1 / (sections.length - 1),
-            inertia: true,
+            inertia: false,
             duration: { min: 2, max: 2 },
           },
           end: () => "+=" + document.querySelector(".wrappingIT").offsetWidth,
@@ -46,8 +46,7 @@ function Gallery() {
         duration: 1,
         scrollTrigger: {
           trigger: mainGallery.current,
-          toggleActions: "play",
-          start: "top",
+          start: "top 100%",
           scrub: 1,
         },
       });
@@ -63,47 +62,89 @@ function Gallery() {
         });
     }
   }, []);
+  const MainMexico = useRef(null);
   useEffect(() => {
-    if (window.innerWidth > 620) {
-      const tls = gsap.timeline({
-        ease: Expo.easeOut,
-      });
-      tls
-        .to(images.current.children[0], { opacity: 0 })
-        .to(images.current.children[1], { opacity: 0 })
-        .to(images.current.children[2], { opacity: 0 })
-        .to(images.current.children[3], { opacity: 0 })
-        .to(images.current.children[4], { opacity: 0 })
-        .to(images.current.children[5], { opacity: 0 });
-      if (inView) {
-        tls
-          .to(images.current.children[0], {
-            opacity: 1,
-            y: -100,
-          })
-          .to(images.current.children[3], {
-            opacity: 1,
-            y: 160,
-          })
-          .to(images.current.children[2], {
-            opacity: 1,
-            y: -20,
-          })
-          .to(images.current.children[4], {
-            opacity: 1,
-            y: 130,
-          })
-          .to(images.current.children[1], {
-            opacity: 1,
-            y: -100,
-          })
-          .to(images.current.children[5], {
-            opacity: 1,
-            y: 100,
-          });
-      }
-    }
-  }, [inView]);
+    const tls = gsap.timeline({
+      ease: Expo.easeOut,
+      scrollTrigger: {
+        trigger: MainMexico.current,
+        start: "top",
+        end: "+=300%",
+        markers: {
+          startColor: "red",
+          endColor: "red",
+          fontSize: "100px",
+        },
+      },
+    });
+    tls
+      .fromTo(
+        images.current.children[0],
+        {
+          opacity: 0,
+          y: 0,
+        },
+        {
+          opacity: 1,
+          y: -100,
+        }
+      )
+      .fromTo(
+        images.current.children[3],
+        {
+          opacity: 0,
+          y: 0,
+        },
+        {
+          opacity: 1,
+          y: 160,
+        }
+      )
+      .fromTo(
+        images.current.children[2],
+        {
+          opacity: 0,
+          y: 0,
+        },
+        {
+          opacity: 1,
+          y: -20,
+        }
+      )
+      .fromTo(
+        images.current.children[4],
+        {
+          opacity: 0,
+          y: 0,
+        },
+        {
+          opacity: 1,
+          y: 130,
+        }
+      )
+      .fromTo(
+        images.current.children[1],
+        {
+          opacity: 0,
+          y: 0,
+        },
+        {
+          opacity: 1,
+          y: -100,
+        }
+      )
+      .fromTo(
+        images.current.children[5],
+        {
+          opacity: 0,
+          y: 0,
+        },
+        {
+          opacity: 1,
+          y: 100,
+        }
+      );
+  }, []);
   return (
     <div ref={mainGallery} className="wrappingIT">
       <div ref={green_panel} className="panel green">
@@ -118,7 +159,7 @@ function Gallery() {
         </span>
       </div>
       {/* animating second panel */}
-      <div ref={ref} className="panel white">
+      <div ref={MainMexico} className="panel white">
         <h1>MEXiCAN FOOD, iT&apos;S AUTHENTiC</h1>
         <div ref={images} className="whitePannelGrid">
           <img

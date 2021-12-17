@@ -20,7 +20,6 @@ function Reviews() {
     SecondNumber.current.style.opacity = 0;
     ThirdNumber.current.style.opacity = 0;
     FourthNumber.current.style.opacity = 0;
-    FifthNumber.current.style.opacity = 0;
     const tl = gsap.timeline({
       ease: Sine.easeOut,
       scrollTrigger: {
@@ -35,7 +34,7 @@ function Reviews() {
     tl.fromTo(
       reviewsChild.current.children[0],
       { opacity: 0, skewX: "0deg", skewY: "0deg" },
-      { opacity: 1, skewX: ".2deg", skewY: "5deg", x: -800, background: "#FFF" }
+      { opacity: 1, skewX: ".2deg", skewY: "5deg", x: -600, background: "#FFF" }
     )
       .to(firstNumber.current, { opacity: 1 })
       .fromTo(
@@ -45,7 +44,7 @@ function Reviews() {
           opacity: 1,
           skewX: ".2deg",
           skewY: "5deg",
-          x: -800,
+          x: -600,
           background: "#FFF",
         }
       )
@@ -58,7 +57,7 @@ function Reviews() {
           opacity: 1,
           skewX: ".2deg",
           skewY: "5deg",
-          x: -800,
+          x: -600,
           background: "#FFF",
         }
       )
@@ -71,26 +70,12 @@ function Reviews() {
           opacity: 1,
           skewX: ".2deg",
           skewY: "5deg",
-          x: -800,
+          x: -600,
           background: "#FFF",
         }
       )
       .to(ThirdNumber.current, { opacity: 0 })
       .to(FourthNumber.current, { opacity: 1 })
-      .fromTo(
-        reviewsChild.current.children[4],
-        { opacity: 0, skewX: "0deg", skewY: "0deg" },
-        {
-          opacity: 1,
-          skewX: ".2deg",
-          skewY: "5deg",
-          x: -800,
-          background: "#FFF",
-        }
-      )
-      .to(FourthNumber.current, { opacity: 0 })
-      .to(FifthNumber.current, { opacity: 1 });
-
     // setLength(reviewsChild.current.children.length);
   }, []);
   return (
@@ -100,7 +85,6 @@ function Reviews() {
         <h1 ref={SecondNumber}>2</h1>
         <h1 ref={ThirdNumber}>3</h1>
         <h1 ref={FourthNumber}>4</h1>
-        <h1 ref={FifthNumber}>5</h1>
       </div>
       <div ref={reviewsChild} className={styles.reviews_child}>
         <div className={styles.each_rev_child}>
@@ -158,23 +142,7 @@ function Reviews() {
           <h2>Name</h2>
           <div>
             <img
-              src="/nocontactdelivery-rinco.jpg"
-              width="200"
-              height="300"
-              alt=""
-            />
-          </div>
-          <div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. ad amet,
-              nemo dolor nihil corporis minus ea quas voluptates corrupti.
-            </p>
-          </div>
-        </div>
-        <div className={styles.each_rev_child}>
-          <h2>Name</h2>
-          <div>
-            <img
+              id="delta"
               src="/nocontactdelivery-rinco.jpg"
               width="200"
               height="300"

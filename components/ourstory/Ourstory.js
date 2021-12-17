@@ -30,7 +30,7 @@ function Ourstory() {
         trigger: ourstory.current,
         toggleActions: "play",
         start: "top top",
-        end: "+=400",
+        end: "+=300%",
         scrub: 1,
         pin: true,
       },
@@ -58,7 +58,7 @@ function Ourstory() {
         { opacity: 0, clipPath: "inset(100%  40%)" },
         {
           opacity: 1,
-          clipPath:"inset(0%  0%)",
+          clipPath: "inset(0%  0%)",
         }
       )
       .to(image_ourStory.current.children[0], {
@@ -72,10 +72,11 @@ function Ourstory() {
         <div className={styles.ourStory_child}>
           <div className={styles.ourStory_handelContent}>
             <p ref={paraOurstory}>
-            Jarabe Mexican Street Food
+              Jarabe Mexican Street Food
               <br />
-              Tacos, tortas & other Mexican street food doled out in an unassuming counter-serve eatery.
-              <br/>
+              Tacos, tortas & other Mexican street food doled out in an
+              unassuming counter-serve eatery.
+              <br />
               and we offer all type of services
             </p>
           </div>

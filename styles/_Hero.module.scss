@@ -38,18 +38,20 @@
 @media only screen and (max-width: 1400px) {
   ._hero {
     width: $per;
-    height: $vh;
+    height: $per;
     display: $f;
     justify-content: $c;
     align-items: $c;
     background: #000;
     flex-direction: $cl;
+    padding: $padd;
     h1 {
       font-family: $font;
       font-size: 150px;
       letter-spacing: 20px;
       text-align: $c;
       color: #fff;
+      text-transform: uppercase;
     }
     ._hero_child {
       display: $f;
