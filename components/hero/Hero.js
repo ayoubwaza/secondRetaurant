@@ -74,11 +74,10 @@ function Hero() {
   return (
     <section ref={hero} id="hero">
       <div className={styles._hero}>
-        <h1 ref={title}>El Rincon De Mexico</h1>
+        <h1 ref={title}>Jarabe Mexican Street Food</h1>
         <div ref={hero_child} className={styles._hero_child}>
           <div ref={hero_firstImg} className={styles.firstImage_Hero}>
-          <img src="./image.jpeg" width="" height="" alt="" />
-
+          <img src="./image1.jpeg" width="" height="" alt="" />
           </div>
           <div className={styles.image_hero_text}>
             <h2 ref={subTitle}>Mexico...</h2>

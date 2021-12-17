@@ -3,7 +3,7 @@ import styles from "../../styles/Home.module.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Expo } from "gsap";
-import InView, { useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 gsap.registerPlugin(ScrollTrigger);
 function Gallery() {
   const mainGallery = useRef(null);
@@ -11,7 +11,6 @@ function Gallery() {
   const greenPanelTitle = useRef(null);
   const greenPanle_ImageHandler = useRef(null);
   const greenPanelSubTitle = useRef(null);
-  const mexicotitle_panel = useRef(null);
   const images = useRef(null);
   const [ref, inView] = useInView({
     threshold: 0,
@@ -31,7 +30,7 @@ function Gallery() {
           snap: {
             snapTo: 1 / (sections.length - 1),
             inertia: true,
-            duration: { min: 2, max: 2},
+            duration: { min: 2, max: 2 },
           },
           end: () => "+=" + document.querySelector(".wrappingIT").offsetWidth,
         },
@@ -61,13 +60,7 @@ function Gallery() {
           color: "transparent",
           webkitTextStroke: "4px #FFF",
           zIndex: 9,
-        })
-        .to(greenPanelSubTitle.current, { y: 100 })
-        .fromTo(
-          mexicotitle_panel.current,
-          { opacity: 0 },
-          { opacity: 1, y: -100 }
-        );
+        });
     }
   }, []);
   useEffect(() => {
@@ -115,16 +108,13 @@ function Gallery() {
     <div ref={mainGallery} className="wrappingIT">
       <div ref={green_panel} className="panel green">
         <span className="greenPanelTitle" ref={greenPanelTitle}>
-          THE GREEN COLOR
+          F**ing
         </span>
         <div ref={greenPanle_ImageHandler} className="greenPanle_ImageHandler">
           <img src="/image1.jpeg" alt="" />
         </div>
         <span ref={greenPanelSubTitle} className="greenPanelSubTitle">
-          The 2 Pannel
-        </span>
-        <span ref={mexicotitle_panel} className="mexicotitle_panel">
-          Mexico
+          DELICIOUS
         </span>
       </div>
       {/* animating second panel */}
@@ -138,31 +128,31 @@ function Gallery() {
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/image2.jpg"
+            src="/rinco.jpg"
             width="200"
             height="300"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/image2.jpg"
+            src="/rinco1.jpg"
             width="200"
             height="300"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/image2.jpg"
+            src="/rinco2.jpg"
             width="200"
             height="300"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/image2.jpg"
+            src="/rinco3.jpg"
             width="200"
             height="350"
             alt="restaurant chicago el rincon de mexico"
           />
           <img
-            src="/image2.jpg"
+            src="/rinco4.jpg"
             width="200"
             height="300"
             alt="restaurant chicago el rincon de mexico"

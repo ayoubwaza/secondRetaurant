@@ -33,11 +33,6 @@ function Ourstory() {
         end: "+=400",
         scrub: 1,
         pin: true,
-        markers: {
-          startColor: "yellow",
-          endColor: "yellow",
-          fontSize: "40px",
-        },
       },
     });
     tl.fromTo(
@@ -77,11 +72,11 @@ function Ourstory() {
         <div className={styles.ourStory_child}>
           <div className={styles.ourStory_handelContent}>
             <p ref={paraOurstory}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              alias aliquam, sapiente quo ullam eius autem itaque quibusdam
+            Jarabe Mexican Street Food
               <br />
-              sequi, id velit odit non! Consectetur velit molestiae illo eius
-              fugiat quas?
+              Tacos, tortas & other Mexican street food doled out in an unassuming counter-serve eatery.
+              <br/>
+              and we offer all type of services
             </p>
           </div>
           <div>

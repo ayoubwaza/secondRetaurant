@@ -6,8 +6,8 @@ function PrivacyPolicy() {
   return (
     <div>
       <Head>
-        <title>JAD FAST FOOD- privacy policy</title>
-        <meta name="description" content="chicago JAD FAST FOOD" />
+        <title>Jarabe Mexican Street Food - privacy policy</title>
+        <meta name="description" content="chicago Jarabe Mexican Street Food" />
         <link rel="icon" href="/logo.png" />
       </Head>
       <style jsx global>

@@ -39,9 +39,9 @@ function Footer() {
               </a>
             </Link>
           </div>
-          <p>©2021 JFF FastFood®. All Rights Reserved</p>
+          <p>©2021 Jarabe Mexican Street Food. All Rights Reserved</p>
           <p className={styles.addresse}>
-            6645 S Halsted St, Chicago, IL 60621, United States
+          1835 W Harrison St, Chicago, IL 60612, United States
           </p>
         </div>
       </div>

@@ -6,8 +6,8 @@ function ContactUs() {
   return (
     <div className={styles.contactUs}>
       <Head>
-        <title>JAD FAST FOOD - contact us</title>
-        <meta name="description" content="chicago JAD FAST FOOD" />
+        <title>Jarabe Mexican Street Food - contact us</title>
+        <meta name="description" content="chicago Jarabe Mexican Street Food" />
         <link rel="icon" href="/logo.png" />
       </Head>
       <style jsx global>
