@@ -1,28 +1,28 @@
 .contactUs {
   position: $re;
-  width: 100%;
-  height: 100%;
+  width: $per;
+  height: $vh;
   overflow: hidden;
+  display: $f;
+  justify-content: $c;
+  align-items: $c;
+  flex-direction: $cl;
   &::before {
-    content: "Contact";
+    content: "Contact Us";
     color: transparent;
     -webkit-text-stroke: 2px #fff;
-    font-family: "Corinthia", cursive;
-    font-size: 200px;
-    transform: rotate(90deg);
-    top: 10%;
+    font-family: $font;
+    font-size: 150px;
     position: absolute;
+    top: 15%;
+    left: 0%;
   }
-  &::after {
-    content: "Us";
-    color: transparent;
-    -webkit-text-stroke: 2px #fff;
-    font-family: "Corinthia", cursive;
-    font-size: 200px;
-    transform: rotate(90deg);
+  .Hovered_Effect_Div {
+    width: 700px;
+    height: 700px;
     position: absolute;
-    right: 0;
-    top: 50%;
+    z-index: 3;
+    cursor: pointer;
   }
   .contactUs_child {
     width: $perhelf;
@@ -32,6 +32,9 @@
     flex-direction: $cl;
     text-align: $c;
     font-family: $po;
+    .handle_child_form {
+      z-index: 4;
+    }
     h1 {
       color: #fff;
     }
@@ -71,7 +74,7 @@
     }
   }
 }
-@media only screen and (max-width:700px){
+@media only screen and (max-width: 700px) {
   .contactUs {
     position: $re;
     width: 100%;
@@ -86,17 +89,6 @@
       transform: rotate(90deg);
       top: 10%;
       position: absolute;
-    }
-    &::after {
-      content: "Us";
-      color: transparent;
-      -webkit-text-stroke: 2px #fff;
-      font-family: "Corinthia", cursive;
-      font-size: 200px;
-      transform: rotate(90deg);
-      position: absolute;
-      right: 0;
-      top: 50%;
     }
     .contactUs_child {
       width: $per;

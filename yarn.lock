@@ -1897,6 +1897,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+luxy.js@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/luxy.js/-/luxy.js-0.1.0.tgz#43e60e76ccb6431c4fd258484eacdca8b9981352"
+  integrity sha512-G26qu+HjBbZKyIRsgQVxR1dxw7mJ4g7ckqJ/0u8p6og1Lnp7w1rwdaw4jjoAb0UQZGoIzTvU+CGEbCNmJXvyQw==
+
 make-dir@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-3.1.0.tgz#415e967046b3a7f1d185277d84aa58203726a13f"

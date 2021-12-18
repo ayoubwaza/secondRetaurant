@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import "../styles/globals.scss";
-
 function MyApp({ Component, pageProps }) {
   const costumCursur = useRef(null);
   const Checkers = () => {
@@ -27,20 +26,24 @@ function MyApp({ Component, pageProps }) {
       costumCursur.current.style.top = `${Y}px`;
     });
   }, []);
-  const ImageHovering = () => {
+  /* const ImageHovering = () => {
+    ===> getBoundingClientRect
     const getImage = document.getElementById("delta");
-    getImage.addEventListener("mouseenter", (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      
-    });
-    getImage.addEventListener("mouseleave", (e) => {
-      getImage.style.transform = "scale(1)";
-    });
+    if (getImage) {
+      getImage.addEventListener("mouseenter", (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+      });
+      getImage.addEventListener("mouseleave", (e) => {
+        getImage.style.transform = "scale(1)";
+      });
+    } else {
+      return null;
+    }
   };
   useEffect(() => {
     ImageHovering();
-  }, []);
+  }, []); */
   return (
     <>
       <Component {...pageProps} />

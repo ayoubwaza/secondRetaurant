@@ -70,11 +70,6 @@ function Gallery() {
         trigger: MainMexico.current,
         start: "top",
         end: "+=300%",
-        markers: {
-          startColor: "red",
-          endColor: "red",
-          fontSize: "100px",
-        },
       },
     });
     tls
@@ -152,7 +147,7 @@ function Gallery() {
           F**ing
         </span>
         <div ref={greenPanle_ImageHandler} className="greenPanle_ImageHandler">
-          <img src="/image1.jpeg" alt="" />
+          <img src="/mexican-food.jpg" alt="" />
         </div>
         <span ref={greenPanelSubTitle} className="greenPanelSubTitle">
           DELICIOUS

@@ -13,70 +13,78 @@ function Reviews() {
   const SecondNumber = useRef(null);
   const ThirdNumber = useRef(null);
   const FourthNumber = useRef(null);
-  const FifthNumber = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
-    firstNumber.current.style.opacity = 0;
-    SecondNumber.current.style.opacity = 0;
-    ThirdNumber.current.style.opacity = 0;
-    FourthNumber.current.style.opacity = 0;
-    const tl = gsap.timeline({
-      ease: Sine.easeOut,
-      scrollTrigger: {
-        trigger: reviewsParent.current,
-        toggleActions: "play reverse restart",
-        start: "top top",
-        end: "+=300%",
-        scrub: 1,
-        pin: true,
-      },
-    });
-    tl.fromTo(
-      reviewsChild.current.children[0],
-      { opacity: 0, skewX: "0deg", skewY: "0deg" },
-      { opacity: 1, skewX: ".2deg", skewY: "5deg", x: -600, background: "#FFF" }
-    )
-      .to(firstNumber.current, { opacity: 1 })
-      .fromTo(
-        reviewsChild.current.children[1],
-        { opacity: 0, skewX: "0deg", skewY: "0deg" },
-        {
-          opacity: 1,
-          skewX: ".2deg",
-          skewY: "5deg",
-          x: -600,
-          background: "#FFF",
-        }
-      )
-      .to(firstNumber.current, { opacity: 0 })
-      .to(SecondNumber.current, { opacity: 1 })
-      .fromTo(
-        reviewsChild.current.children[2],
-        { opacity: 0, skewX: "0deg", skewY: "0deg" },
-        {
-          opacity: 1,
-          skewX: ".2deg",
-          skewY: "5deg",
-          x: -600,
-          background: "#FFF",
-        }
-      )
-      .to(SecondNumber.current, { opacity: 0 })
-      .to(ThirdNumber.current, { opacity: 1 })
-      .fromTo(
-        reviewsChild.current.children[3],
-        { opacity: 0, skewX: "0deg", skewY: "0deg" },
-        {
-          opacity: 1,
-          skewX: ".2deg",
-          skewY: "5deg",
-          x: -600,
-          background: "#FFF",
-        }
-      )
-      .to(ThirdNumber.current, { opacity: 0 })
-      .to(FourthNumber.current, { opacity: 1 })
-    // setLength(reviewsChild.current.children.length);
+    if (window.innerWidth > 800) {
+      firstNumber.current.style.opacity = 0;
+      SecondNumber.current.style.opacity = 0;
+      ThirdNumber.current.style.opacity = 0;
+      FourthNumber.current.style.opacity = 0;
+      const tl = gsap.timeline({
+        ease: Sine.easeOut,
+        scrollTrigger: {
+          trigger: reviewsParent.current,
+          toggleActions: "play reverse restart",
+          start: "top top",
+          end: "+=300%",
+          scrub: 1,
+          pin: true,
+        },
+      });
+      tl.to(firstNumber.current, { opacity: 1 })
+        .fromTo(
+          reviewsChild.current.children[0],
+          { opacity: 0, skewX: "0deg", skewY: "0deg" },
+          {
+            opacity: 1,
+            skewX: ".2deg",
+            skewY: "5deg",
+            x: -600,
+            background: "#FFF",
+          }
+        )
+        .to(firstNumber.current, { opacity: 0 })
+        .to(SecondNumber.current, { opacity: 1 })
+        .fromTo(
+          reviewsChild.current.children[1],
+          { opacity: 0, skewX: "0deg", skewY: "0deg" },
+          {
+            opacity: 1,
+            skewX: ".2deg",
+            skewY: "5deg",
+            x: -600,
+            background: "#FFF",
+          }
+        )
+        .to(SecondNumber.current, { opacity: 0 })
+        .to(ThirdNumber.current, { opacity: 1 })
+        .fromTo(
+          reviewsChild.current.children[2],
+          { opacity: 0, skewX: "0deg", skewY: "0deg" },
+          {
+            opacity: 1,
+            skewX: ".2deg",
+            skewY: "5deg",
+            x: -600,
+            background: "#FFF",
+          }
+        )
+        .to(ThirdNumber.current, { opacity: 0 })
+        .to(FourthNumber.current, { opacity: 1 })
+        .fromTo(
+          reviewsChild.current.children[3],
+          { opacity: 0, skewX: "0deg", skewY: "0deg" },
+          {
+            opacity: 1,
+            skewX: ".2deg",
+            skewY: "5deg",
+            x: -600,
+            background: "#FFF",
+          }
+        );
+    } else {
+      return null;
+    }
   }, []);
   return (
     <div ref={reviewsParent} className={styles.reviews_parent}>
@@ -142,7 +150,6 @@ function Reviews() {
           <h2>Name</h2>
           <div>
             <img
-              id="delta"
               src="/nocontactdelivery-rinco.jpg"
               width="200"
               height="300"

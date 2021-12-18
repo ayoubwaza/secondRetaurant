@@ -4,27 +4,27 @@
   display: $f;
   justify-content: $c;
   align-items: $c;
-  background: #000;
   flex-direction: $cl;
+  background: grey;
   h1 {
     font-family: $font;
     font-size: 180px;
     letter-spacing: 20px;
     text-align: $c;
-    color: #fff;
+    color: #000;
   }
   ._hero_child {
+    width: $perhelf;
     display: $f;
-    justify-content: $c;
+    justify-content: $sp;
     align-items: $c;
     position: $re;
+    z-index: 999;
     .firstImage_Hero {
       overflow: hidden;
-      img {
-        object-fit: $cv;
-        width: 680px;
-        height: 370px;
-      }
+      object-fit: $cv;
+      width: 1000px;
+      height: 500px;
     }
     .image_hero_text {
       position: absolute;
@@ -32,6 +32,35 @@
         font-size: 100px;
         color: #fff;
       }
+    }
+    .first_child_hero_img {
+      overflow: hidden;
+      img {
+        object-fit: $cv;
+        width: 300px;
+        height: 400px;
+      }
+    }
+    .last_child_hero_img {
+      overflow: hidden;
+      img {
+        object-fit: $cv;
+        width: 300px;
+        height: 400px;
+      }
+    }
+  }
+  .opening_etxt {
+    margin-top: 5px;
+    position: $re;
+    z-index: 9;
+    p {
+      font-weight: $b;
+      font-size: 30px;
+      color: #fff;
+      font-family: $po;
+      text-align: $c;
+      margin: 0;
     }
   }
 }
@@ -42,7 +71,6 @@
     display: $f;
     justify-content: $c;
     align-items: $c;
-    background: #000;
     flex-direction: $cl;
     padding: $padd;
     h1 {
@@ -85,11 +113,14 @@
       text-align: $c;
     }
     ._hero_child {
+      width: $per;
+      flex-direction: $cl;
+      div {
+        margin-bottom: 20px;
+      }
       .firstImage_Hero {
-        img {
-          width: $per;
-          height: 370px;
-        }
+        width: $per !important;
+        height: 370px;
       }
     }
   }

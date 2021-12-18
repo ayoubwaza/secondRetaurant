@@ -37,7 +37,7 @@ function Ourservices() {
           { opacity: 1 }
         )
         .to(firstHandler.current.children[0], { scale: 1.6 })
-        .to(firstHandler.current, { y: -300 })
+        .to(firstHandler.current, { y: -270 })
         .to(secondHandler.current.children[0], { clipPath: "inset(0% 0%)" })
         .fromTo(
           secondHandler.current.children[1],
@@ -45,7 +45,7 @@ function Ourservices() {
           { opacity: 1, color: "#FFF" }
         )
         .to(secondHandler.current.children[0], { scale: 1.6 })
-        .to(secondHandler.current, { y: 200 })
+        .to(secondHandler.current, { y: 250 })
         .to(thirdHandler.current.children[0], { clipPath: "inset(0% 0%)" })
         .fromTo(
           thirdHandler.current.children[1],
@@ -53,7 +53,7 @@ function Ourservices() {
           { opacity: 1, color: "#FFF" }
         )
         .to(thirdHandler.current.children[0], { scale: 1.6 })
-        .to(thirdHandler.current, { y: -150 })
+        .to(thirdHandler.current, { y: -260 })
         .to(fourthHandler.current.children[0], { clipPath: "inset(0% 0%)" })
         .fromTo(
           fourthHandler.current.children[1],
@@ -61,7 +61,7 @@ function Ourservices() {
           { opacity: 1 }
         )
         .to(fourthHandler.current.children[0], { scale: 1.6 })
-        .to(fourthHandler.current, { y: 160 })
+        .to(fourthHandler.current, { y: 240 })
         .to(fifththHandler.current.children[0], { clipPath: "inset(0% 0%)" })
         .fromTo(
           fifththHandler.current.children[1],
@@ -69,7 +69,7 @@ function Ourservices() {
           { opacity: 1 }
         )
         .to(fifththHandler.current.children[0], { scale: 1.6 })
-        .to(fifththHandler.current, { y: -30, x: 150 });
+        .to(fifththHandler.current, { y: -30, x: 160 });
     } else {
       return null;
     }
@@ -79,11 +79,11 @@ function Ourservices() {
       <h1 ref={service_title}>SERVICES && OPTIONS</h1>
       <div ref={services_child} className={styles.our_services_child}>
         <div ref={firstHandler} className={styles.handel_image_services}>
-          <img src="/dine-in-rinco.jpg" width="350" height="300" alt="" />
+          <img src="/dine-in-rinco.jpg" alt="" />
           <span>Dine-in</span>
         </div>
         <div ref={secondHandler} className={styles.handel_image_services}>
-          <img src="/takeawayfoodrinco.jpg" width="350" height="300" alt="" />
+          <img src="/takeawayfoodrinco.jpg" alt="" />
           <span>Take-away</span>
         </div>
         <div ref={thirdHandler} className={styles.handel_image_services}>
@@ -96,7 +96,7 @@ function Ourservices() {
           <span>No-contact delivery</span>
         </div>
         <div ref={fourthHandler} className={styles.handel_image_services}>
-          <img src="/delivery-rinco.jpg" width="350" height="300" alt="" />
+          <img src="/delivery-rinco.jpg" alt="" />
           <span>Delivery</span>
         </div>
         <div ref={fifththHandler} className={styles.handel_image_services}>

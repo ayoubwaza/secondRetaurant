@@ -132,6 +132,24 @@ h6 {
     height: 300px;
   }
 }
+.hero {
+  &::before {
+    content: "";
+    position: absolute;
+    background: #000;
+    height: 50vh;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: #FFF;
+    height: 50vh;
+    top: 50%;
+    right: 0;
+  }
+}
 @media only screen and (max-width: 1400px) {
   .green {
     position: relative;
@@ -256,11 +274,30 @@ h6 {
       opacity: 1;
       width: 200px;
       height: 100%;
-      margin: 20px 0 20px  0;
+      margin: 20px 0 20px 0;
     }
   }
-}
-.check_reviews{
-  color: red;
-  font-size: 200px;
+  canvas {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .hero {
+    &::before {
+      content: "";
+      position: absolute;
+      background: #000;
+      height: 50%;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: #000;
+      height: 50%;
+      top: 50%;
+      right: 0;
+    }
+  }
 }

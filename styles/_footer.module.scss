@@ -6,6 +6,7 @@
   display: $f;
   justify-content: $c;
   align-items: $c;
+  z-index: 99999 !important;
   .footer_child {
     width: $perhelf;
     height: $per;

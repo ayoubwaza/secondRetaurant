@@ -23,17 +23,17 @@ function Footer() {
         <hr />
         <div className={styles.last_section_footer}>
           <div className={styles.ptop}>
-            <Link href="/privacy-policy.html">
+            <Link href="/privacy-policy">
               <a>
                 <p>Privacy Policy</p>
               </a>
             </Link>
-            <Link href="/termofservices.html">
+            <Link href="/termofservices">
               <a>
                 <p>Term of Services</p>
               </a>
             </Link>
-            <Link href="/contactus.html">
+            <Link href="/contactus">
               <a>
                 <p>Contact Us</p>
               </a>

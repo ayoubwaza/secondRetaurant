@@ -55,7 +55,7 @@ function Ourstory() {
       })
       .fromTo(
         image_ourStory.current,
-        { opacity: 0, clipPath: "inset(100%  40%)" },
+        { opacity: 0, clipPath: "inset(100%  -40%)" },
         {
           opacity: 1,
           clipPath: "inset(0%  0%)",
@@ -82,7 +82,7 @@ function Ourstory() {
           </div>
           <div>
             <div className={styles.handle_image_ourStory} ref={image_ourStory}>
-              <img src="/image1.jpeg" width="800" height="400" alt="" />
+              <img src="/rinco2.jpg" width="800" height="400" alt="" />
             </div>
           </div>
         </div>
