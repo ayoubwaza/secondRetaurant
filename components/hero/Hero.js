@@ -100,7 +100,6 @@ function Hero() {
         { y: 1000, opacity: 0 },
         {
           duration: window.innerWidth > 800 ? 2 : 0,
-
           delay: 0.2,
           y: 0,
           opacity: 1,
@@ -121,7 +120,6 @@ function Hero() {
       )
       .to(split2.lines, {
         duration: window.innerWidth > 800 ? 2 : 0,
-
         y: 0,
         opacity: 1,
         stagger: 0.1,
@@ -166,7 +164,7 @@ function Hero() {
   return (
     <section ref={hero} className="hero">
       <div className={styles._hero}>
-        <h1 ref={title}>Jarabe Mexican Street Food</h1>
+        <h1 ref={title}>M... Street Food</h1>
         <div ref={hero_child} className={`${styles._hero_child}`}>
           <div ref={firstHeroImg} className={styles.first_child_hero_img}>
             <img src="/rinco6.jpg" alt="" />
