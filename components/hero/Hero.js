@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { Sine } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image1 from "../../public/image1.jpeg";
-import Image2 from "../../public/mexican-food.jpg";
+import Image2 from "../../public/rinco3.jpg";
 import overflay from "../../public/overlay5.jpg";
 import hoverEffect from "hover-effect";
 function Hero() {
@@ -96,6 +96,22 @@ function Hero() {
         }
       )
       .fromTo(
+        hero_firstImg.current,
+        {
+          clipPath: "polygon(0 0 , 0 0, 0 100% , 0% 100%)",
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          clipPath: "polygon(0 0 , 100% 0, 100% 100% , 0% 100%)",
+          duration: window.innerWidth > 800 ? 2 : 0,
+        }
+      )
+      .to(hero_firstImg.current.children[0], {
+        scale: 1.6,
+        duration: window.innerWidth > 800 ? 2 : 0,
+      })
+      .fromTo(
         split.lines,
         { y: 1000, opacity: 0 },
         {
@@ -106,18 +122,6 @@ function Hero() {
           stagger: 0.1,
         }
       )
-      .fromTo(
-        hero_firstImg.current,
-        {
-          x: 200,
-          opacity: 0,
-        },
-        {
-          x: 0,
-          opacity: 1,
-          duration: window.innerWidth > 800 ? 2 : 0,
-        }
-      )
       .to(split2.lines, {
         duration: window.innerWidth > 800 ? 2 : 0,
         y: 0,
@@ -125,10 +129,7 @@ function Hero() {
         stagger: 0.1,
         fontSize: "100px",
       })
-      .to(hero_firstImg.current.children[0], {
-        scale: 1.6,
-        duration: window.innerWidth > 800 ? 2 : 0,
-      })
+
       .fromTo(
         openingText.current,
         { opacity: 0, y: 10 },
