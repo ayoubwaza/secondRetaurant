@@ -4,9 +4,9 @@ import SplitText from "../../utils/split3.min.js";
 import gsap from "gsap";
 import { Sine } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Image1 from "../../public/image1.jpeg";
-import Image2 from "../../public/rinco3.jpg";
-import overflay from "../../public/overlay5.jpg";
+import Image1 from "../../public/heroImg1.jpg";
+import Image2 from "../../public/heroImg2.jpg";
+import overflay from "../../public/overlay4.jpg";
 import hoverEffect from "hover-effect";
 function Hero() {
   const title = useRef();
@@ -108,7 +108,7 @@ function Hero() {
         }
       )
       .to(hero_firstImg.current.children[0], {
-        scale: 1.6,
+        scale: 1.2,
         duration: window.innerWidth > 800 ? 2 : 0,
       })
       .fromTo(
@@ -168,14 +168,14 @@ function Hero() {
         <h1 ref={title}>M... Street Food</h1>
         <div ref={hero_child} className={`${styles._hero_child}`}>
           <div ref={firstHeroImg} className={styles.first_child_hero_img}>
-            <img src="/rinco6.jpg" alt="" />
+            <img src="/heroImg3.jpg" alt="" />
           </div>
           <div ref={hero_firstImg} className={styles.firstImage_Hero}></div>
           <div className={styles.image_hero_text}>
             <h2 ref={subTitle}>Mexico...</h2>
           </div>
           <div ref={lastHeroImg} className={styles.last_child_hero_img}>
-            <img src="/rinco9.jpg" alt="" />
+            <img src="/heroImg4.jpg" alt="" />
           </div>
         </div>
         <div ref={openingText} className={styles.opening_etxt}>

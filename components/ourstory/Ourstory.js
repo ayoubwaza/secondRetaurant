@@ -35,25 +35,25 @@ function Ourstory() {
         pin: true,
       },
     });
-    tl.fromTo(
-      spliTitle.lines,
-      { y: 200, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-        duration: 2,
-      }
-    )
+    tl.to(spliTitle.lines, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      duration: 2,
+    })
       .to(YearsContent.current, {
         opacity: 1,
-        x: window.innerWidth > 600 ? 300 : 0,
-        duration: 2,
+        x: window.innerWidth > 600 ? 200 : 0,
+        duration: 2.5,
         scale: window.innerWidth > 600 ? 1.2 : 1,
       })
-      .to(twenyOne.current, { opacity: 0, duration: 2 })
+      .to(twenyOne.current, { y: 500, duration: 2 })
       .fromTo(twenyTwo.current, { opacity: 0 }, { opacity: 1, duration: 2 })
-      .to(twenyTwo.current, { opacity: 0, duration: 2 })
+      .fromTo(
+        twenyTwo.current,
+        { y: 0, opacity: 1 },
+        { y: 500, opacity: 0, duration: 2 }
+      )
       .fromTo(twenyThree.current, { opacity: 0 }, { opacity: 1, duration: 2 });
   }, []);
   return (
@@ -70,19 +70,19 @@ function Ourstory() {
                 <div ref={twenyOne} className={styles.content_magic_years}>
                   <h2>19</h2>
                   <div>
-                    <img src="/rinco.jpg" alt="" />
+                    <img src="/story1.jpg" alt="" />
                   </div>
                 </div>
                 <div ref={twenyTwo} className={styles.content_magic_years}>
                   <h2>20</h2>
                   <div>
-                    <img src="/rinco.jpg" alt="" />
+                    <img src="/story2.jpg" alt="" />
                   </div>
                 </div>
                 <div ref={twenyThree} className={styles.content_magic_years}>
                   <h2>21</h2>
                   <div>
-                    <img src="/rinco.jpg" alt="" />
+                    <img src="/story3.jpg" alt="" />
                   </div>
                 </div>
               </div>

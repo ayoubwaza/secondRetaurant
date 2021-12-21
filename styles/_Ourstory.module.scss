@@ -76,7 +76,7 @@
     margin-bottom: 20px;
     h1 {
       font-family: $font;
-      font-size: 180px;
+      font-size: 100px;
       letter-spacing: 20px;
       text-align: $c;
       color: #000;
@@ -103,6 +103,51 @@
       }
       .handle_image_ourStory {
         position: $re;
+      }
+    }
+  }
+  .ourStory_Magic_Years {
+    width: $perhelf;
+    display: $f;
+    justify-self: $sp;
+    align-items: $c;
+    h1 {
+      position: $re;
+      &::after {
+        content: "/";
+        position: absolute;
+        left: -2%;
+        top: 0;
+        color: red;
+      }
+    }
+    .content_magic_years {
+      position: $re;
+      display: $f;
+      h2 {
+        font-family: $font;
+        font-size: 100px;
+        letter-spacing: 20px;
+        text-align: $c;
+        opacity: 0.7;
+      }
+    }
+    .handle_all_Years_content {
+      position: $re;
+      .handle_all_Years_content_child {
+        display: $f;
+        justify-content: $c;
+        align-items: $c;
+        .content_magic_years {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          img {
+            width: 500px;
+            height: 300px;
+          }
+        }
       }
     }
   }
